@@ -17,7 +17,9 @@ class LogicScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(
               left: 10,
-              top: 5
+              top: 5,
+              bottom: 15,
+
             ),
 
             child: Row(
@@ -25,7 +27,7 @@ class LogicScreen extends StatelessWidget {
               children: [
                 RichText(
                   text: TextSpan(
-                      text:'Totla Salary',
+                      text:'Totla Salary: ',
                     style: TextStyle(
                       fontSize: 25,
                       color: Colors.black,
@@ -33,10 +35,15 @@ class LogicScreen extends StatelessWidget {
 
                   ),
                 ),
+                SizedBox(
+                  width: 10,
+                ),
                 Expanded(
                   child: TextField(
+
                     decoration: InputDecoration(
                       hintText: 'Enter Your Salary',
+
 
 
 
@@ -46,9 +53,124 @@ class LogicScreen extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+
+          Padding(
+            padding: EdgeInsets.only(
+                left: 10,
+                top: 5
+            ),
+
+
+            child: Row(
+
+              children: [
+                RichText(
+                  text: TextSpan(
+                    text:'Remaining salary: ',
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.black,
+                    ),
+
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                child:  RichText(
+                  text: TextSpan(
+                    text:'0.0',
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.black,
+                    ),
+
+                  ),
+                ),
+                )
+              ],
+            ),
+          ),
+
+          Padding(
+            padding: EdgeInsets.only(
+                left: 10,
+                top: 30,
+              bottom: 50,
+
+
+            ),
+
+
+            child: Row(
+
+              children: [
+                RichText(
+                  text: TextSpan(
+                    text:'Salary disbursed: ',
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.black,
+                    ),
+
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child:  RichText(
+                    text: TextSpan(
+                      text:'0.0',
+                      style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.black,
+                      ),
+
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+
+          Expanded(
+
+            child: ListView(
+
+
+              children: [
+                Text('I spent Today...',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black,
+                ),
+                ),
+
+                  Container(
+
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'How much did you spend this day ..!',
+
+                      ),
+                    ),
+                  ),
+
+              ],
+            ),
+          ),
         ]
       ),
+
     );
   }
 }
